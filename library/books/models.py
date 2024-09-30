@@ -11,7 +11,7 @@ class Book(models.Model):
 
     def clean(self):
         # Custom validation logic for title length
-        if len(self.ISBN) != 12:
+        if len(self.ISBN) != 13:
             raise ValidationError({'title': 'Title must be exactly 12 characters long.'})
     
     def save(self, *args, **kwargs):
